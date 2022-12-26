@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+
+/* ================================ header ================================ */
+
+.header-container {
+  width: 100%;
+  height: 4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-container__nav {
+  margin-right: 25px;
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-container__nav a {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1rem;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.header-container__nav span {
+  color: #3339;
+  font-size: 1.7rem;
+}
+
+.header-container__nav .account_circle {
+  font-size: 2rem;
+}
+
+.container-icons {
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container__nav a:hover {
+  text-decoration: underline;
+}
+
+.container-icons:hover {
+  background-color: #6662;
+}
+
+/* ================================= section image google ========================== */
+
+.section-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section-image img {
+  object-fit: contain;
+  object-position: center bottom;
+  width: 380px;
+  height: 180px;
+}
+
+/*================================ section buscador =============================== */
+
+.section-buscador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+
+.section-buscador__input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 50vw;
+  margin-bottom: 70px;
+  padding: 15px 20px;
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+}
+
+.section-buscador__input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.section-buscador__input span {
+  color: #777;
+}
+
+.section-buscador__input:hover {
+  box-shadow: 0px 2px 1px 1px #7773;
+}
+
+/* ========================== section buttons ======================== */
+
+.section-buttons {
+  width: 50%;
+  height: 100px;
+  text-align: center;
+}
+.section-buttons button {
+  background-color: #eaeff3;
+  color: #3c4043;
+  margin-right: 40px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.section-buttons button:hover {
+  border: 1px solid lightgray;
+  box-shadow: 0px 1px 1px lightgray;
+}
+
+/* ============================ footer =================================== */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8882;
+  border: 1px solid #3333;
+  width: 100%;
+  height: 50px;
+}
+
+.footer-links-left {
+  margin-left: 30px;
+  display: flex;
+  gap: 25px;
+}
+
+.footer-links-right {
+  margin-right: 30px;
+  display: flex;
+  gap: 25px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #70757a;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ======================== media queries =========================== */
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .header-container__nav a {
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+  .header-container__nav span {
+    margin-left: 5px;
+    font-size: 1.5rem;
+  }
+
+  .header-container__nav .account_circle {
+    font-size: 1.8rem;
+  }
+
+  .section-image {
+    width: 100%;
+  }
+
+  .section-image img {
+    width: 300px;
+    height: 130px;
+  }
+
+  .section-buscador {
+    width: 100%;
+  }
+
+  .section-buscador__input {
+    height: 45px;
+    width: 90%;
+  }
+
+  .section-buttons button {
+    background-color: #eaeff3;
+    color: #3c4043;
+    margin-right: 40px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+
+  .section-buttons {
+    display: none;
+  }
+
+  .header-container__nav {
+    gap: 4px;
+    margin-right: 5px;
+  }
+
+  .footer {
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .header-container__nav a {
+    font-size: 1rem;
+  }
+  .header-container__nav span {
+    font-size: 1.5rem;
+  }
+
+  .header-container__nav .account_circle {
+    font-size: 1.8rem;
+  }
+
+  .section-image img {
+    width: 300px;
+    height: 130px;
+  }
+
+  .section-buscador__input {
+    height: 40px;
+    width: 70%;
+  }
+
+  .section-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-buttons button {
+    font-size: 0.7rem;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .header-container__nav a {
+    font-size: 1.1rem;
+  }
+  .header-container__nav span {
+    font-size: 1.6rem;
+  }
+
+  .header-container__nav .account_circle {
+    font-size: 1.9rem;
+  }
+
+  .section-buttons button {
+    font-size: 0.7rem;
+  }
+  .footer {
+    font-size: 0.9rem;
+  }
+}
